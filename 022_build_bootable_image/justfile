@@ -1,0 +1,5 @@
+build:
+  NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/10e7ad5bbcb421fe07e3a4ad53a634b0cd57ffac.tar.gz nix-shell -p nixos-generators --run "nixos-generate --format iso --configuration ./configuration.nix -o result"
+
+clean:
+  rm -f result

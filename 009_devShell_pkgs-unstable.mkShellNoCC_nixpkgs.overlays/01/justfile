@@ -1,0 +1,5 @@
+run:
+  nix develop --verbose
+
+clean:
+  rm -f flake.lock

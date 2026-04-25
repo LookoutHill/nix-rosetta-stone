@@ -1,0 +1,8 @@
+build:
+  nix-shell -p docker --run "nix-build configuration.nix"
+
+load:
+  nix-shell -p docker --run "docker load -i result"
+
+clean:
+  rm -f result

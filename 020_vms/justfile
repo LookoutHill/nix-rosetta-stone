@@ -1,0 +1,9 @@
+build:
+  nix-build '<nixpkgs/nixos>' -A vm -I nixpkgs=channel:nixos-25.11 -I nixos-config=./configuration.nix
+
+run:
+  QEMU_KERNEL_PARAMS=console=ttyS0 ./result/bin/run-nixos-vm -nographic
+  reset
+
+clean:
+  rm -f result nixos.qcow2
